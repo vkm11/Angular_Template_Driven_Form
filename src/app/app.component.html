@@ -1,6 +1,6 @@
 <h1>{{title}}</h1>
 <form #loginForm="ngForm" (ngSubmit)=userLogin(loginForm.value)>
-<input type="email" required #name="ngModel" pattern="[a-zA-Z]+$" placeholder="Enter Name" name="name" ngModel>
+<input type="email" required #name="ngModel"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Enter Name" name="name" ngModel>
 <br>
 <span *ngIf="name.invalid && name.touched" style="color:red;">Please enter a valid Email</span>
 <br>
